@@ -31,6 +31,27 @@ npm run test
 npm run build
 ```
 
+## Cloudflare Pages prototype deployment
+
+The current Alpha foundation is deployed as a static Cloudflare Pages project:
+
+- **Project:** `freehold-app`
+- **Stable URL:** `https://freehold-app.pages.dev`
+- **Production branch:** `main`
+
+An operator with a personal Cloudflare API token can deploy a verified build
+without putting credentials in this repository:
+
+```bash
+export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
+npm run lint && npm run typecheck && npm run test && npm run build
+wrangler pages deploy dist --project-name freehold-app --branch main
+```
+
+Use Cloudflare Pages only for this browser-local prototype. A future hosted
+Alpha requires a separate staging environment with authentication, durable
+storage, encrypted backups, and a migration-tested archive contract.
+
 ## Security and privacy
 
 Do not commit tokens, exports, user content, mailing-list data, or `.env`
