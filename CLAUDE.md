@@ -8,7 +8,7 @@ The canonical commitments are in `docs/product/alpha-charter.md` and the impleme
 
 ## Repository boundaries
 
-- This is the public reference application repository: `github.com/jordankrueger/freehold-app`.
+- This is the public reference application repository: `github.com/barnraising-foundation/freehold-app`.
 - Keep it separate from `../freehold` (strategy, research, whitepaper) and `../freehold/site` (the deployed marketing website).
 - Never copy credentials, mailing-list data, production exports, or private strategy notes into this public repository.
 - Use synthetic fixture data only.
